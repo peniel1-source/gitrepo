@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: build docker image
+    command: docker build -t devops-image .
+    args:
+      chdir: /opt/docker
